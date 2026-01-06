@@ -155,10 +155,52 @@
   .bio-photo { flex: 0 0 250px; } /* 控制照片宽度，可调整 */
   .bio-text { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
   .bio-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 5px; }
+
+  /* 1. Flex 容器：让“左侧照片列”和“右侧文字列”横向并排 */
+  .bio-container {
+      display: flex;
+      flex-wrap: nowrap; /* 不换行，保持左右结构 */
+      gap: 30px;         /* 左右列之间的间距 */
+      align-items: flex-start; /* 顶部对齐 */
+  }
+
+  /* 2. 左侧照片列：固定宽度 */
+  .bio-photo {
+      flex: 0 0 200px; /* 固定宽度 200px，可根据照片实际大小微调 */
+      text-align: center; /* 让下面的邮箱居中 */
+  }
+  .bio-photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+  }
+  /* 3. 右侧文字列：占据剩余空间 */
+  .bio-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column; /* 内容从上到下排列 */
+      justify-content: space-between;
+  }
+  /* 4. 头像下方的老字体联系方式 */
+  .contact-info {
+      font-family: 'Georgia', 'Times New Roman', serif; /* 传统衬线老字体 */
+      font-size: 1.1rem;      
+      color: #333;            
+      text-align: center;     
+      margin-top: 10px;       
+      display: block;         
+      text-decoration: none;
+  }
+  .contact-info:hover {
+      text-decoration: underline;
+      color: #0056b3;
+  }
   
+  /* --- 移动端适配：屏幕变窄时变回上下排列 --- */
   @media (max-width: 768px) {
       .bio-container { flex-direction: column; }
-      .bio-photo { flex: 0 0 auto; width: 100%; height: 300px; }
+      .bio-photo { flex: 0 0 auto; width: 100%; margin: 0 auto; }
   }
 
   /* 新的 News 日期样式 */
@@ -169,6 +211,15 @@
     padding: 0 !important;
     margin-right: 5px;
 }
+
+  /* 锚点滚动对齐：控制各 section 跳转后距离顶部的空隙 */
+  /* --- Sidebar 跳转位置修正 --- */
+  /* 统一设置所有锚点的偏移量 */
+  /* 如果您觉得停得“太靠下”（即头顶留白太多），请把 80px 改小，比如 60px */
+  /* 如果您觉得停得“被挡住了”（即标题被导航栏遮住），请把数值改大 */
+  #about, #goal, #news, #selected-papers, #friends, #service {
+      scroll-margin-top: 75px; /* 推荐值：导航栏高度(约56px) + 20px 缓冲 */
+  }
 </style>
 
     
@@ -246,9 +297,9 @@
     </h1>
   </header>
 
-  <article>
+  <article id="about">
     
-    <div class="clearfix mb-4">
+    <!-- <div class="clearfix mb-4">
         <div class="profile float-left mr-4 mb-3" style="width: 170px;">
             <img class="img-fluid z-depth-1 rounded" src="./photos/weimin-stanford.jpeg" style="width: 170px; height: 200px; object-fit: cover; object-position: 50% 60%;">
         </div>
@@ -260,7 +311,29 @@
         <p style="color: red; font-weight: bold;">
             I am actively seeking internship opportunities for 2026 and full-time positions starting in Summer 2027. I am open to collaborations and discussions—please feel free to reach out anytime.
         </p>
-    </div>
+    </div> -->
+    <div class="bio-container mb-2">
+        
+      <div class="bio-photo">
+          <img class="z-depth-1 rounded" src="./photos/weimin-stanford.jpeg" alt="Weimin Bai">
+          
+          <a href="mailto:weiminbai@stu.pku.edu.cn" class="contact-info">
+              weiminbai@stu.pku.edu.cn
+          </a>
+      </div>
+
+      <div class="bio-text">
+          <div>
+              <p>Greetings! I am a PhD Candidate majoring in Computer Science and Physics at <a href="http://english.pku.edu.cn">Peking University</a>, supervised by <a href="https://users.cms.caltech.edu/~hesun/">Dr. He Sun</a> and <a href="https://wenzhengchen.github.io/">Dr. Wenzheng Chen</a>. I specialize in generative models and inverse rendering. I developed <strong><a href="https://github.com/weiminbai/EMDiffusion">EMDiffusion</a></strong> for data-efficient diffusion training, <strong><a href="https://ai4scientificimaging.org/latentdem/">LatentDEM</a></strong> for blind inversion, <strong><a href="https://ai4scientificimaging.org/vlm3d/">VLM3D</a></strong> and <strong><a href="https://ai4scientificimaging.org/dive3d/">Dive3D</a></strong> for 3D-aware reward modeling, and <strong><a href="https://ai4scientificimaging.org/instantvir/">InstantViR</a></strong> for real-time video reconstruction. My research interests include generative models, diffusion distillation and memory compression.</p>
+
+              <p>I obtained my Master's degree in Computer Science from Southeast University in 2023, where I was advised by <a href="https://palm.seu.edu.cn/hxue/">Prof. Hui Xue</a>. Prior to that, I earned a Bachelor's degree in Computer Science from China Agricultural University in 2020.</p>
+          </div>
+
+          <p style="color: red; font-weight: bold;">
+            I am actively seeking internship for 2026 and full-time positions starting in Summer 2027. I am open to collaborations and discussions—please feel free to reach out anytime.
+        </p>
+      </div>
+  </div>
     
 
     <!-- <div id="goal" class="goal-box">
@@ -276,7 +349,7 @@
   </div>
 
 
-    <h3 class="mb-3">News</h3>
+    <h3 id="news" class="mb-3">News</h3>
     <div class="news-container">
         <ul>
           <li>
@@ -382,7 +455,7 @@
 
     <hr>
 
-    <div class="publications mb-5 mt-4">
+    <div id="selected-papers" class="publications mb-5 mt-4">
         <h3 class="mb-4">Selected Publications <small><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=M6bEs8IAAAAJ" target="_blank" style="font-size: 0.6em;">(full list see Google Scholar)</a></small></h3>
 
         <div class="row mb-4">
@@ -476,7 +549,7 @@
 
     <hr>
 
-    <div class="friends-section mt-5">
+    <div id="friends" class="friends-section mt-5">
         <p><strong>Mentors with whom I have worked on projects:</strong></p>
         <ul>
         <li><strong><a href="https://ai4scientificimaging.org/" target="_blank">He Sun</a></strong>, PhD, tenure-track Assistant Professor at <a href="https://english.pku.edu.cn/" target="_blank">Peking University</a>.</li>
@@ -526,7 +599,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#goal">Vision</a></li>
         <li><a href="#news">News</a></li>
-        <li><a href="#selected-papers">Selected</a></li>
+        <li><a href="#selected-papers">Publications</a></li>
         <li><a href="#friends">Friends</a></li>
         <li><a href="#service">Service</a></li>
     </ul>
