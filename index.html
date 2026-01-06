@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Weimin Bai</title>
+<meta name="description" content="Weimin Bai's academic website.">
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="main.css">
+
+<link rel="canonical" href="/">
+
+<style>
+    /* Custom styles for publication list */
+    .pub-img-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .pub-img-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .pub-venue-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 51, 102, 0.85); /* Dark blue background */
+        color: white;
+        padding: 2px 8px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        border-bottom-left-radius: 5px;
+    }
+    .post-title span.title-text {
+        color: #333;
+    }
+    .post-title span.affiliation-text {
+        color: #666;
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+</style>
+
+
+<style>
+  /* 1. 侧边目录样式 */
+  .sidebar-nav {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: none; /* 移动端隐藏 */
+  }
+  @media (min-width: 1200px) { .sidebar-nav { display: block; } }
+  .sidebar-nav ul { list-style: none; padding-left: 0; }
+  .sidebar-nav li { margin-bottom: 15px; border-left: 2px solid #eee; padding-left: 10px; transition: 0.3s; }
+  .sidebar-nav li:hover { border-left-color: #007bff; }
+  .sidebar-nav a { color: #999; font-size: 14px; text-decoration: none; font-weight: 500; }
+  .sidebar-nav a:hover { color: #007bff; }
+
+  /* 2. 回到顶部按钮样式 */
+  #back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: #007bff;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  /* 3. Long-term Goal 样式美化 */
+  .goal-box {
+      background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+      color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      margin: 30px 0;
+      position: relative;
+  }
+  .goal-box h5 { font-weight: bold; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 10px; margin-bottom: 15px; }
+  .goal-box p { font-size: 1.05rem; line-height: 1.6; opacity: 0.95; margin-bottom: 0; }
+  
+  /* 4. 图片自适应容器 */
+  .bio-container { display: flex; flex-wrap: wrap; gap: 30px; }
+  .bio-photo { flex: 0 0 250px; } /* 控制照片宽度，可调整 */
+  .bio-text { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .bio-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 5px; }
+  
+  @media (max-width: 768px) {
+      .bio-container { flex-direction: column; }
+      .bio-photo { flex: 0 0 auto; width: 100%; height: 300px; }
+  }
+</style>
+
+    
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav sticky-bottom-footer">
+
+    <header>
+
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+        <div class="row ml-1 ml-sm-0">
+          <span class="contact-icon text-center">
+  <a href="mailto:weiminbai@stu.pku.edu.cn"><i class="fas fa-envelope"></i></a>
+  <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=M6bEs8IAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>  
+  <a href="https://github.com/weiminbai" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/weimin-bai-90208b145/" target="_blank" title="LinkedIn" style="margin-left: 5px;"><i class="fab fa-linkedin"></i></a>
+</span>
+
+        </div>
+      
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+              About
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+              <a class="nav-link" href="publications.html">
+                Publications
+              </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="teaching.html">Teaching</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="teaching.html">Blog</a>
+          </li>
+
+          <li class="nav-item ">
+              <a class="nav-link" href="CV.pdf">
+                CV                
+              </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <div class="container mt-5" style="max-width: 950px;">
+      <div class="post">
+
+  <header class="post-header mb-4">
+    <h1 class="post-title">
+     <span class="font-weight-bold title-text">Weimin Bai</span>, <span class="affiliation-text">PhD Candidate @ Peking University</span>
+    </h1>
+  </header>
+
+  <article>
+    
+    <div class="clearfix mb-4">
+        <div class="profile float-left mr-4 mb-3" style="width: 170px;">
+            <img class="img-fluid z-depth-1 rounded" src="./photos/weimin-stanford.jpeg" style="width: 170px; height: 200px; object-fit: cover; object-position: 50% 60%;">
+        </div>
+
+        <p>Greetings! I am a PhD Candidate majoring in Computer Science and Physics at <a href="http://english.pku.edu.cn">Peking University</a>, supervised by <a href="https://users.cms.caltech.edu/~hesun/">Dr. He Sun</a> and <a href="https://wenzhengchen.github.io/">Dr. Wenzheng Chen</a>. I specialize in generative models and inverse rendering. I developed <strong><a href="https://github.com/weiminbai/EMDiffusion">EMDiffusion</a></strong> for data-efficient diffusion training, <strong><a href="https://ai4scientificimaging.org/latentdem/">LatentDEM</a></strong> for blind inversion, <strong><a href="https://ai4scientificimaging.org/vlm3d/">VLM3D</a></strong> and <strong><a href="https://ai4scientificimaging.org/dive3d/">Dive3D</a></strong> for 3D-aware reward modeling, and <strong><a href="https://ai4scientificimaging.org/instantvir/">InstantViR</a></strong> for real-time video reconstruction. My research interests include generative models, diffusion distillation and memory compression.</p>
+
+        <p>I obtained my Master's degree in Computer Science from Southeast University in 2023, where I was advised by <a href="https://palm.seu.edu.cn/hxue/">Prof. Hui Xue</a>. Prior to that, I earned a Bachelor's degree in Computer Science from China Agricultural University in 2020.</p>
+
+        <p style="color: red; font-weight: bold;">
+            I am actively seeking internship opportunities for 2026 and full-time positions starting in Summer 2027. I am open to collaborations and discussions—please feel free to reach out anytime.
+        </p>
+    </div>
+    
+
+    <div id="goal" class="goal-box">
+      <h5><i class="fas fa-rocket mr-2"></i>Long-term Goal</h5>
+      <p>To build embodied intelligence capable of interacting with the physical world in real-time. This requires systems with ultra-fast reaction times and virtually unbounded context memory, ultimately aiming to significantly boost human productivity and liberation.</p>
+    </div>
+
+
+    <h3 class="mb-3">News</h3>
+    <div class="news-container">
+        <ul>
+        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">20th December 2025</span>: Accepted to <font color="red"><b>Transactions on Machine Learning Research (TMLR)</b></font>.<br>
+            <b>Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching</b> <a href="https://openreview.net/pdf?id=OUYMueHLMf" target="\_blank">(Bai et al., 2025)</a>
+        </li>
+
+        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">June 2025</span>: Oral presentation at <strong>ICASSP 2025</strong>, India — <b>Learning from Corruption</b>.<br>
+        </li>
+
+        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">January 2025</span>: Long oral at <strong>Photonics West</strong>, San Francisco — <b>Computational Super-resolution Microscopy</b>.<br>
+        </li>
+
+        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>EM Generalist: A physics-driven diffusion foundation model for electron microscopy</b><br>
+            H Sun, E Ye, C Lu, Z Jiang, <b>W Bai</b>, S Ren, C Wang, J Zhang, R Shi, L Ma, ...<br>
+            <em>2025</em>
+        </li>
+
+        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Microscopic image restoration and uncertainty quantification using physics-informed generative models</b><br>
+            <b>W Bai</b>, S Ren, E Ye, W Tang, H Sun<br>
+            <em>Computational Optical Imaging and Artificial Intelligence in Biomedical …, 2025</em>
+        </li>
+
+        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior</b><br>
+            <b>W Bai</b>, S Xu, Y Ren, J Hao, M Sun, W Chen, H Sun<br>
+            <em>arXiv preprint arXiv:2511.14208, 2025</em>
+        </li>
+        </ul>
+
+        <button class="btn btn-sm btn-outline-primary mt-2 mb-4" type="button" data-toggle="collapse" data-target="#news-more" aria-expanded="false" aria-controls="news-more">
+        Show more
+        </button>
+
+        <div class="collapse mb-4" id="news-more">
+            <ul>
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Masked Auto-Regressive Variational Acceleration: Fast Inference Makes Practical Reinforcement Learning</b><br>
+                    Y Gu, <b>W Bai</b>, Y Wang, W Luo, H Sun<br>
+                    <em>arXiv preprint arXiv:2511.15190, 2025</em>
+                </li>
+            
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Let Language Constrain Geometry: Vision-Language Models as Semantic and Spatial Critics for 3D Generation</b><br>
+                    <b>W Bai</b>, Y Li, W Luo, Z Lai, Y Wang, W Chen, H Sun<br>
+                    <em>arXiv preprint arXiv:2511.14271, 2025</em>
+                </li>
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">August 2024</span>: Talk at <strong>University of Chicago IMSI</strong> — <b>Solving Inverse Problems with Inaccurate Priors or Physical Model</b>.<br>
+                </li>
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching</b><br>
+                <b>W Bai</b>, Y Li, W Chen, W Luo, H Sun<br>
+                <em>Transactions on Machine Learning Research, 2025</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Vision-Language Models as Differentiable Semantic and Spatial Rewards for Text-to-3D Generation</b><br>
+                <b>W Bai</b>, Y Li, W Luo, W Chen, H Sun<br>
+                <em>arXiv preprint arXiv:2509.15772, 2025</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Blind inversion using latent diffusion priors</b><br>
+                <b>W Bai</b>, S Chen, W Chen, H Sun<br>
+                <em>SIGGRAPH Asia 2025 Poster (IEEE Transactions on Image Processing), 2025</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Uni-Instruct: One-step Diffusion Model through Unified Diffusion Divergence Instruction</b><br>
+                Y Wang, <b>W Bai</b>, C Zhang, D Zhang, W Luo, H Sun<br>
+                <em>Advances in Neural Information Processing Systems, 2025</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Learning diffusion model from noisy measurement using principled expectation-maximization method</b><br>
+                <b>W Bai</b>, W Tang, E Ye, S Chen, W Chen, H Sun<br>
+                <em>ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and …, 2025</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2024</span>: <b>An expectation-maximization algorithm for training clean diffusion models from corrupted observations</b><br>
+                <b>W Bai</b>, Y Wang, W Chen, H Sun<br>
+                <em>Advances in Neural Information Processing Systems, 2024</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2024</span>: <b>Integrating amortized inference with diffusion models for learning clean distribution from corrupted images</b><br>
+                Y Wang, <b>W Bai</b>, W Luo, W Chen, H Sun<br>
+                <em>arXiv preprint arXiv:2407.11162, 2024</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2023</span>: <b>A temporal kernel for time series forecasting</b><br>
+                <b>W Bai</b>, H Xue<br>
+                <em>Knowledge-Based Systems, 113623, 2023</em>
+                </li>
+
+                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2021</span>: <b>Learning Deeper Non-Monotonic Networks by Softly Transferring Solution Space</b><br>
+                ZF Wu, H Xue, <b>W Bai</b><br>
+                <em>IJCAI, 3200-3206, 2021</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="publications mb-5 mt-4">
+        <h3 class="mb-4">Selected Publications <small><a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=M6bEs8IAAAAJ" target="_blank" style="font-size: 0.6em;">(full list see Google Scholar)</a></small></h3>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="pub-img-container">
+                    <img src="./photos/placeholder.jpg" alt="InstantViR" class="img-fluid rounded">
+                    <span class="pub-venue-badge">arXiv 2025</span>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h5>InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior</h5>
+                <p class="mb-1 text-muted"><b>Weimin Bai</b>, S Xu, Y Ren, J Hao, M Sun, W Chen, H Sun</p>
+                <p class="mb-2">A real-time video super-resolution, inpainting, and deblurring framework utilizing amortized autoregressive distillation for fast inference.</p>
+                <div>
+                    <a href="https://ai4scientificimaging.org/instantvir/" target="_blank" class="mr-3">[Project Page]</a>
+                    <a href="https://arxiv.org/abs/2511.14208" target="_blank" class="mr-3">[arXiv]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="pub-img-container">
+                    <img src="./photos/placeholder.jpg" alt="Dive3D" class="img-fluid rounded">
+                    <span class="pub-venue-badge">TMLR 2025</span>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h5>Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching</h5>
+                <p class="mb-1 text-muted"><b>Weimin Bai</b>, Y Li, W Chen, W Luo, H Sun</p>
+                <p class="mb-2">A diverse distillation-based method for high-quality text-to-3D generation using score implicit matching to ensure diversity and fidelity.</p>
+                <div>
+                    <a href="https://ai4scientificimaging.org/dive3d/" target="_blank" class="mr-3">[Project Page]</a>
+                    <a href="https://openreview.net/pdf?id=OUYMueHLMf" target="_blank" class="mr-3">[Paper]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="pub-img-container">
+                    <img src="./photos/placeholder.jpg" alt="VLM3D" class="img-fluid rounded">
+                    <span class="pub-venue-badge">arXiv 2025</span>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h5>Let Language Constrain Geometry: Vision-Language Models as Semantic and Spatial Critics for 3D Generation</h5>
+                <p class="mb-1 text-muted"><b>Weimin Bai</b>, Y Li, W Luo, Z Lai, Y Wang, W Chen, H Sun</p>
+                <p class="mb-2">Leveraging Vision-Language Models to provide semantic and spatial rewards, guiding 3D generation to better align with textual prompts.</p>
+                <div>
+                    <a href="https://ai4scientificimaging.org/vlm3d/" target="_blank" class="mr-3">[Project Page]</a>
+                    <a href="https://arxiv.org/abs/2511.14271" target="_blank" class="mr-3">[arXiv]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="pub-img-container">
+                    <img src="./photos/placeholder.jpg" alt="LatentDEM" class="img-fluid rounded">
+                    <span class="pub-venue-badge">SIGGRAPH Asia 2025 Poster</span>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h5>Blind Inversion using Latent Diffusion Priors</h5>
+                <p class="mb-1 text-muted"><b>Weimin Bai</b>, S Chen, W Chen, H Sun</p>
+                <p class="mb-2">A framework for solving blind inverse problems by leveraging the powerful priors of latent diffusion models.</p>
+                <div>
+                    <a href="https://ai4scientificimaging.org/latentdem/" target="_blank" class="mr-3">[Project Page]</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="pub-img-container">
+                    <img src="./photos/placeholder.jpg" alt="EMDiffusion" class="img-fluid rounded">
+                    <span class="pub-venue-badge">ICASSP 2025</span>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h5>Learning Diffusion Model from Noisy Measurement using Principled Expectation-Maximization Method</h5>
+                <p class="mb-1 text-muted"><b>Weimin Bai</b>, W Tang, E Ye, S Chen, W Chen, H Sun</p>
+                <p class="mb-2">A data-efficient diffusion training method capable of learning clean distributions directly from noisy or corrupted observations.</p>
+                <div>
+                    <a href="https://github.com/weiminbai/EMDiffusion" target="_blank" class="mr-3">[GitHub]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="friends-section mt-5">
+        <p><strong>Friends with whom I have worked on projects:</strong></p>
+        <ul>
+        <li><strong><a href="https://zicokolter.com/" target="_blank">J. Zico Kolter</a></strong>, Professor, Director of the Machine Learning Department, Carnegie Mellon University (CMU).</li>
+        <li><strong><a href="https://maple.lab.westlake.edu.cn/" target="_blank">Guo-jun Qi</a></strong>, Professor, IEEE Fellow, Director of MAPLE Lab of Westlake University.</li>
+        <li><strong><a href="https://www.linkedin.com/in/guang-lin-7a464624/" target="_blank">Guang Lin</a></strong>, Associate Dean for Research, Moses Cobb Stevens Professor in Mathematics, Mech Eng<a href="https://engineering.purdue.edu/ME" target="_blank"> Purdue University</a>.</li>
+        <li><strong><a href="https://ml.comp.nus.edu.sg/kawaguchi" target="_blank">Kenji Kawaguchi</a></strong>, Presidential Young Professor at Department of Computer Science<a href="https://ml.comp.nus.edu.sg/#" target="_blank"> National University of Singapore</a>.</li>
+        <li><strong><a href="https://zhenguol.github.io/" target="_blank">Zhenguo Li</a></strong>, director of the AI Theory Lab in <a href="https://www.noahlab.com.hk/#/home" target="_blank">Huawei Noah’s Ark Lab, Hongkong</a>, Adjunct Professor in the department of computer science and engineering, <a href="https://hkust.edu.hk/zh-hant" target="_blank">Hong Kong University of Science and Technology</a>.</li>
+        <li><strong><a href="https://ai4scientificimaging.org/" target="_blank">He Sun</a></strong>, PhD, tenure-track Assistant Professor at <a href="https://english.pku.edu.cn/" target="_blank">Peking University</a>.</li>
+        <li><strong><a href="https://hu-tianyang.github.io/" target="_blank">Tianyang Hu</a></strong>, PhD, Incoming Assistant Professor at the Chinese University of Hong Kong, Shenzhen (<a href="https://sds.cuhk.edu.cn/en" target="_blank">CUHK-Shenzhen</a>).</li>
+        <li><strong><a href="https://wenzhengchen.github.io/" target="_blank">Wenzheng Chen</a></strong>, PhD, tenure-track Assistant Professor at <a href="https://english.pku.edu.cn/" target="_blank">Peking University</a>.</li>
+        <li><strong><a href="https://www.weideng.org/" target="_blank">Wei Deng</a></strong>, PhD, Senior Research Scientist at Morgan Stanley, New York.</li>
+        <li><strong><a href="https://rtqichen.github.io/" target="_blank">Ricky Tian Qi Chen</a></strong>, PhD, Research Scientist at Meta Fundamental AI Research (FAIR), New York.</li>
+        <li>Zheyuan Hu, PhD from the National University of Singapore, the Winner of the NeurIPS 2024 best paper award.</li>
+        <li><strong><a href="https://www.linkedin.com/in/sethforsgren/" target="_blank">Seth Forsgren</a></strong>, BS from Princeton, CEO and the founder of <a href="https://www.riffusion.com/" target="_blank">Riffusion AI</a>, San Francisco.</li>
+        <li><strong><a href="https://www.haykmartiros.com/" target="_blank">Hayk Martiros</a></strong>, MS from Stanford, CTO and the co-founder of <a href="https://www.riffusion.com/" target="_blank">Riffusion AI</a>, technical VP of <a href="https://www.skydio.com/" target="_blank">Skydio</a>.</li>
+        <li><strong><a href="" target="_blank">Debing Zhang</a></strong>, PhD, Director of Artificial General Intelligence (AGI) team of <a href="https://x.com/xiaohongshu" target="_blank">RedNote</a>, aka Xiaohongshu Inc.</li>
+        </ul>
+        
+        <p><strong>Previous students whom I have advised or worked with:</strong></p>
+        <ul>
+        <li><strong><a href="" target="_blank">Weimin Bai</a></strong>, PhD student at Peking University, ACE top-talent intern at hi-Lab, Xiaohongshu, co-advised with Professor He Sun.</li>
+        <li><strong><a href="" target="_blank">Haoyang Zheng</a></strong>, PhD student at Purdue University, co-advised with Professor Guang Lin.</li>
+        <li><strong><a href="" target="_blank">Yongzhao Chao</a></strong>, MS student at Chinese University of Hongkong (Shenzhen), co-advised with Professor Tianyang Hu.</li>
+        <li><strong><a href="" target="_blank">Yubo Li</a></strong>, Undergraduate. student at Tsinghua University, and incoming PhD student at Peking University, co-advised by Professor He Sun.</li>
+        <li><strong><a href="" target="_blank">Harry Liu</a></strong>, PhD student at Purdue University, co-advised with Professor Guang Lin.</li>
+        <li><strong><a href="" target="_blank">Yifei Wang</a></strong>, Undergraduate student at Peking University, and incoming PhD student at Rice University (Houston). Co-advised with Professor He Sun.</li>
+        <li><strong><a href="" target="_blank">Kaihang Pan</a></strong>, PhD student at Zhejiang University. The winner of CPVR2025 Best Student Paper Honorable Mention.</li>
+        <li><strong><a href="" target="_blank">Yihong Luo</a></strong>, PhD student at HKUST.</li>
+        <li><strong><a href="" target="_blank">Le Zhuo</a></strong>, Incoming CS PhD student of <a href="https://mmlab.ie.cuhk.edu.hk/index.html" target="_blank">MMLab</a> at the Chinese University of Hong Kong.</li>
+        <li><strong><a href="" target="_blank">Zemin Huang</a></strong>, CS PhD student of the joint PhD Program of Zhejiang University and Westlake University, co-advised with Professor Guo-jun Qi.</li>
+        <li><strong><a href="" target="_blank">Tiancheng Li</a></strong>, CS PhD student of the joint PhD Program of Zhejiang University and Westlake University, co-advised with Professor Guo-jun Qi.</li>
+        <li><strong><a href="" target="_blank">Zilyu Ye</a></strong>, CS undergraduate student of South China University of Technology, ByteDance Top Seed Intern, co-advised with Professor Guo-jun Qi.</li>
+        <li><strong><a href="" target="_blank">Yuxuan Gu</a></strong>, Incoming M.S. student at Peking University, co-advised with Professor He Sun.</li>
+        <li><strong><a href="" target="_blank">Chaowei Liu</a></strong>, National University of Singapore (NUS), co-advised with Professor Guo-jun Qi.</li>
+        </ul>
+    </div>
+  
+  </article>
+
+</div>
+
+    </div>
+
+    </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180825462-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180825462-1');
+</script>
+
+
+<script src="/assets/js/common.js"></script>
+
+<script src="/assets/js/dark_mode.js"></script>
+
+
+</html>
