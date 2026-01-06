@@ -10,12 +10,14 @@
 <meta name="description" content="Weimin Bai's academic website.">
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
 
 <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
 
@@ -60,6 +62,16 @@
 
 
 <style>
+  /* 1. 页面整体缩放 90% */
+  body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #fdfdfd;
+      position: relative;
+      /* 核心代码：整体缩放 90% */
+      zoom: 0.9; 
+  }
+
   /* 1. 侧边目录样式 */
   .sidebar-nav {
       position: fixed;
@@ -130,7 +142,8 @@
   }
   .goal-box p {
       /* 使用刚才引入的飘逸字体 */
-      font-family: 'Caveat', cursive; 
+      font-family: 'Patrick Hand', cursive; /* 更改为 Patrick Hand */
+      /* font-family: 'Caveat', cursive;  */
       font-size: 1.5rem; /* 字体加大一点以保证可读性 */
       line-height: 1.3;
       margin-bottom: 0;
@@ -266,30 +279,36 @@
     <h3 class="mb-3">News</h3>
     <div class="news-container">
         <ul>
-        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">20th December 2025</span>: Accepted to <font color="red"><b>Transactions on Machine Learning Research (TMLR)</b></font>.<br>
-            <b>Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching</b> <a href="https://openreview.net/pdf?id=OUYMueHLMf" target="\_blank">(Bai et al., 2025)</a>
+          <li>
+            <span class="news-date">Dec 20, 2025:</span> 
+            One paper gets accepted to <b style="color:red">Transactions on Machine Learning Research (TMLR)</b>. Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching <a href="https://openreview.net/pdf?id=OUYMueHLMf" target="\_blank">(Bai et al., 2025)</a>
         </li>
+        <li>
+          <span class="news-date">June 12 2025:</span> 
+          Oral presentation at <strong>ICASSP 2025</strong>, India — <b>Learning from Corruption</b>.
+      </li>
+      
+      <li>
+          <span class="news-date">January 15 2025:</span> 
+          Long oral at <strong>Photonics West</strong>, San Francisco — <b>Computational Super-resolution Microscopy</b>.
+      </li>
+      
+      <li>
+          <span class="news-date">2025:</span> 
+          <b>EM Generalist: A physics-driven diffusion foundation model for electron microscopy</b>. H Sun, E Ye, C Lu, Z Jiang, <b>W Bai</b>, S Ren, C Wang, J Zhang, R Shi, L Ma, ... <em>(2025)</em>
+      </li>
+      
+      <li>
+          <span class="news-date">2025:</span> 
+          <b>Microscopic image restoration and uncertainty quantification using physics-informed generative models</b>. <b>W Bai</b>, S Ren, E Ye, W Tang, H Sun. <em>Computational Optical Imaging and Artificial Intelligence in Biomedical …, 2025</em>
+      </li>
+      
+      <li>
+          <span class="news-date">2025:</span> 
+          <b>InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior</b>. <b>W Bai</b>, S Xu, Y Ren, J Hao, M Sun, W Chen, H Sun. <em>arXiv preprint arXiv:2511.14208, 2025</em>
+      </li>
 
-        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">June 2025</span>: Oral presentation at <strong>ICASSP 2025</strong>, India — <b>Learning from Corruption</b>.<br>
-        </li>
 
-        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">January 2025</span>: Long oral at <strong>Photonics West</strong>, San Francisco — <b>Computational Super-resolution Microscopy</b>.<br>
-        </li>
-
-        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>EM Generalist: A physics-driven diffusion foundation model for electron microscopy</b><br>
-            H Sun, E Ye, C Lu, Z Jiang, <b>W Bai</b>, S Ren, C Wang, J Zhang, R Shi, L Ma, ...<br>
-            <em>2025</em>
-        </li>
-
-        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Microscopic image restoration and uncertainty quantification using physics-informed generative models</b><br>
-            <b>W Bai</b>, S Ren, E Ye, W Tang, H Sun<br>
-            <em>Computational Optical Imaging and Artificial Intelligence in Biomedical …, 2025</em>
-        </li>
-
-        <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>InstantViR: Real-Time Video Inverse Problem Solver with Distilled Diffusion Prior</b><br>
-            <b>W Bai</b>, S Xu, Y Ren, J Hao, M Sun, W Chen, H Sun<br>
-            <em>arXiv preprint arXiv:2511.14208, 2025</em>
-        </li>
         </ul>
 
         <button class="btn btn-sm btn-outline-primary mt-2 mb-4" type="button" data-toggle="collapse" data-target="#news-more" aria-expanded="false" aria-controls="news-more">
@@ -298,61 +317,65 @@
 
         <div class="collapse mb-4" id="news-more">
             <ul>
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Masked Auto-Regressive Variational Acceleration: Fast Inference Makes Practical Reinforcement Learning</b><br>
-                    Y Gu, <b>W Bai</b>, Y Wang, W Luo, H Sun<br>
-                    <em>arXiv preprint arXiv:2511.15190, 2025</em>
-                </li>
+              <li>
+                <span class="news-date">2025:</span>
+                <b>Masked Auto-Regressive Variational Acceleration: Fast Inference Makes Practical Reinforcement Learning</b>. Y Gu, <b>W Bai</b>, Y Wang, W Luo, H Sun. <em>arXiv preprint arXiv:2511.15190, 2025</em>
+            </li>
             
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Let Language Constrain Geometry: Vision-Language Models as Semantic and Spatial Critics for 3D Generation</b><br>
-                    <b>W Bai</b>, Y Li, W Luo, Z Lai, Y Wang, W Chen, H Sun<br>
-                    <em>arXiv preprint arXiv:2511.14271, 2025</em>
-                </li>
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">August 2024</span>: Talk at <strong>University of Chicago IMSI</strong> — <b>Solving Inverse Problems with Inaccurate Priors or Physical Model</b>.<br>
-                </li>
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching</b><br>
-                <b>W Bai</b>, Y Li, W Chen, W Luo, H Sun<br>
-                <em>Transactions on Machine Learning Research, 2025</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Vision-Language Models as Differentiable Semantic and Spatial Rewards for Text-to-3D Generation</b><br>
-                <b>W Bai</b>, Y Li, W Luo, W Chen, H Sun<br>
-                <em>arXiv preprint arXiv:2509.15772, 2025</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Blind inversion using latent diffusion priors</b><br>
-                <b>W Bai</b>, S Chen, W Chen, H Sun<br>
-                <em>SIGGRAPH Asia 2025 Poster (IEEE Transactions on Image Processing), 2025</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Uni-Instruct: One-step Diffusion Model through Unified Diffusion Divergence Instruction</b><br>
-                Y Wang, <b>W Bai</b>, C Zhang, D Zhang, W Luo, H Sun<br>
-                <em>Advances in Neural Information Processing Systems, 2025</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2025</span>: <b>Learning diffusion model from noisy measurement using principled expectation-maximization method</b><br>
-                <b>W Bai</b>, W Tang, E Ye, S Chen, W Chen, H Sun<br>
-                <em>ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and …, 2025</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2024</span>: <b>An expectation-maximization algorithm for training clean diffusion models from corrupted observations</b><br>
-                <b>W Bai</b>, Y Wang, W Chen, H Sun<br>
-                <em>Advances in Neural Information Processing Systems, 2024</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2024</span>: <b>Integrating amortized inference with diffusion models for learning clean distribution from corrupted images</b><br>
-                Y Wang, <b>W Bai</b>, W Luo, W Chen, H Sun<br>
-                <em>arXiv preprint arXiv:2407.11162, 2024</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2023</span>: <b>A temporal kernel for time series forecasting</b><br>
-                <b>W Bai</b>, H Xue<br>
-                <em>Knowledge-Based Systems, 113623, 2023</em>
-                </li>
-
-                <li><span style="background:#e9f5ff;padding:2px 6px;border-radius:3px;font-weight:600;">2021</span>: <b>Learning Deeper Non-Monotonic Networks by Softly Transferring Solution Space</b><br>
-                ZF Wu, H Xue, <b>W Bai</b><br>
-                <em>IJCAI, 3200-3206, 2021</em>
-                </li>
+            <li>
+                <span class="news-date">2025:</span>
+                <b>Let Language Constrain Geometry: Vision-Language Models as Semantic and Spatial Critics for 3D Generation</b>. <b>W Bai</b>, Y Li, W Luo, Z Lai, Y Wang, W Chen, H Sun. <em>arXiv preprint arXiv:2511.14271, 2025</em>
+            </li>
+            
+            <li>
+                <span class="news-date">August 2024:</span>
+                Talk at <strong>University of Chicago IMSI</strong> — <b>Solving Inverse Problems with Inaccurate Priors or Physical Model</b>.
+            </li>
+            
+            <li>
+                <span class="news-date">2025:</span>
+                <b>Dive3D: Diverse Distillation-based Text-to-3D Generation via Score Implicit Matching</b>. <b>W Bai</b>, Y Li, W Chen, W Luo, H Sun. <em>Transactions on Machine Learning Research, 2025</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2025:</span>
+                <b>Vision-Language Models as Differentiable Semantic and Spatial Rewards for Text-to-3D Generation</b>. <b>W Bai</b>, Y Li, W Luo, W Chen, H Sun. <em>arXiv preprint arXiv:2509.15772, 2025</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2025:</span>
+                <b>Blind inversion using latent diffusion priors</b>. <b>W Bai</b>, S Chen, W Chen, H Sun. <em>SIGGRAPH Asia 2025 Poster (IEEE Transactions on Image Processing), 2025</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2025:</span>
+                <b>Uni-Instruct: One-step Diffusion Model through Unified Diffusion Divergence Instruction</b>. Y Wang, <b>W Bai</b>, C Zhang, D Zhang, W Luo, H Sun. <em>Advances in Neural Information Processing Systems, 2025</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2025:</span>
+                <b>Learning diffusion model from noisy measurement using principled expectation-maximization method</b>. <b>W Bai</b>, W Tang, E Ye, S Chen, W Chen, H Sun. <em>ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and …, 2025</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2024:</span>
+                <b>An expectation-maximization algorithm for training clean diffusion models from corrupted observations</b>. <b>W Bai</b>, Y Wang, W Chen, H Sun. <em>Advances in Neural Information Processing Systems, 2024</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2024:</span>
+                <b>Integrating amortized inference with diffusion models for learning clean distribution from corrupted images</b>. Y Wang, <b>W Bai</b>, W Luo, W Chen, H Sun. <em>arXiv preprint arXiv:2407.11162, 2024</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2023:</span>
+                <b>A temporal kernel for time series forecasting</b>. <b>W Bai</b>, H Xue. <em>Knowledge-Based Systems, 113623, 2023</em>
+            </li>
+            
+            <li>
+                <span class="news-date">2021:</span>
+                <b>Learning Deeper Non-Monotonic Networks by Softly Transferring Solution Space</b>. ZF Wu, H Xue, <b>W Bai</b>. <em>IJCAI, 3200-3206, 2021</em>
+            </li>
             </ul>
         </div>
     </div>
@@ -470,6 +493,26 @@
         <li><strong><a href="" target="_blank">Yuxuan Gu</a></strong>, Incoming M.S. student at Peking University, co-advised with Professor He Sun.</li>
         </ul>
     </div>
+
+    <hr>
+
+    <div id="service" class="mb-5 mt-4">
+        <h3 class="mb-3">Academic Service</h3>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <p class="mb-2">
+                    <strong>Journal Reviewer:</strong> <br>
+                    Knowledge-Based Systems (KBS), <br>
+                    IEEE Transactions on Image Processing (TIP), IEEE Transactions on Neural Networks and Learning Systems (TNNLS).
+                </p>
+                <p class="mb-0">
+                    <strong>Conference Reviewer:</strong> <br>
+                    NeurIPS 2025, ICLR 2026/2025, ICASSP 2024/2025/2026, IJCAI 2023.
+                </p>
+            </div>
+        </div>
+    </div>
   
   </article>
 
@@ -478,14 +521,16 @@
     </div>
 
 
-    <div class="sidebar-nav">
-      <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#goal">Goal</a></li>
-          <li><a href="#selected-papers">Selected</a></li>
-          <li><a href="#news">News</a></li>
-      </ul>
-  </div>
+  <div class="sidebar-nav">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#goal">Vision</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#selected-papers">Selected</a></li>
+        <li><a href="#friends">Friends</a></li>
+        <li><a href="#service">Service</a></li>
+    </ul>
+</div>
   
   <div id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
       <i class="fas fa-arrow-up"></i>
