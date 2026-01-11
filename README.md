@@ -1,2 +1,2 @@
-# pkulwj1994.github.io
-Weijian Luo homepage
+# Weimin Bai | PhD Candidate | Generative Models | VLMs | Video Models
+weimin's homepage
