@@ -1,2 +1,2 @@
-# Weimin Bai | PhD Candidate | Generative Models | VLMs
-weimin's homepage
+# pkulwj1994.github.io
+Weijian Luo homepage
