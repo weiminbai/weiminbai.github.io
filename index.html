@@ -124,43 +124,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
 
-  /* 3. Long-term Goal 样式美化 */
-
-  /* 修改后的 Goal 样式 */
-  .goal-box {
-      /* 背景透明度调高：使用 rgba，最后一个数字 0.85 表示透明度，越小越透 */
-      background: linear-gradient(135deg, rgba(43, 88, 118, 0.55) 0%, rgba(78, 67, 118, 0.55) 100%);
-      color: #fff;
-      padding: 15px 20px; /* 减小内部边距 */
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin: 5px 0; /* 减小与上下文的间距 (原为 30px) */
-      position: relative;
-      border: 1px solid rgba(255,255,255,0.1);
-  }
-  .goal-box h5 {
-      font-weight: 800; /* 加粗 */
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-      font-size: 1.3rem; /* 增大字号 (原正文约为 1rem) */
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-family: 'Roboto', sans-serif; /* 标题保持工整的非衬线体，与正文形成对比 */
-  }
-  .goal-box p {
-      /* 使用刚才引入的飘逸字体 */
-      font-family: 'Roboto', sans-serif; /* 标题保持工整的非衬线体，与正文形成对比 */
-      /* font-style: italic;          */
-      /* font-family: 'Patrick Hand', cursive;  */
-      /* font-family: 'Caveat', cursive;  */
-      font-weight: 500;           /* 适中粗细 */
-      font-size: 1.25rem; /* 字体加大一点以保证可读性 */
-      line-height: 1.3;
-      margin-bottom: 0;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  }
-  
   /* 4. 图片自适应容器 */
   .bio-container { display: flex; flex-wrap: wrap; gap: 30px; }
   .bio-photo { flex: 0 0 250px; } /* 控制照片宽度，可调整 */
@@ -228,7 +191,7 @@
   /* 统一设置所有锚点的偏移量 */
   /* 如果您觉得停得“太靠下”（即头顶留白太多），请把 80px 改小，比如 60px */
   /* 如果您觉得停得“被挡住了”（即标题被导航栏遮住），请把数值改大 */
-  #about, #goal, #news, #selected-papers, #industry-experience, #friends, #service {
+  #about, #news, #selected-papers, #industry-experience, #friends, #service {
       scroll-margin-top: 75px; /* 推荐值：导航栏高度(约56px) + 20px 缓冲 */
   }
 </style>
@@ -349,14 +312,6 @@
       </div>
   </div>
     
-
-    <div id="goal" class="goal-box">
-      <h5><i class="fas fa-star mr-2"></i>Vision</h5>
-      <p>
-        Build practical intelligence, which necessitates (1) real-time inference and (2) infinite context memory, thus ultimately empowering applications like agents to liberate human society from repetitive labor and enjoy a peaceful life.
-      </p>
-  </div>
-
 
     <h3 id="news" class="mb-3">News</h3>
     <div class="news-container">
@@ -715,7 +670,6 @@
   <div class="sidebar-nav">
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#goal">Vision</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="#selected-papers">Publications</a></li>
         <li><a href="#friends">Friends</a></li>
